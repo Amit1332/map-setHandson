@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map & Set Handson</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        padding: 10px;
+        background-color: rgb(31, 31, 32);
+        color: white;
+        font-family: sans-serif;
+    }
+
+    h4{
+        font-size: 22px;
+        color: rgb(149, 5, 5);
+        
+    }
+    h6{
+        font-size: 20px;
+        color: rgb(157, 157, 248);
+    }
+
+    pre{
+        background-color: white;
+        color: orangered;
+        padding: 10px;
+        font-size: 18px;
+
+        margin-top: 20px;
+    }
+</style>
+<body>
+
+    <h1 style="text-align: center; margin: 10px 0px;">Map & Set Handson</h1>
+<h4>Question 1 - "Problem:
+    You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+    Your task is to remove all the duplicate occurrences of characters in the string.
+    
+    Input:
+    abcadeecfb
+    
+    Output:
+    abcdef"</h4>
+    <h6>Ans- in this code i use Set Method to remove duplicate and convert into an array to join array element to make a single filtered string </h6>
+    <pre>let str='aabbbcdeeeeffff'
+let arr=[...new Set(str)]
+console.log(rr.join(''))</pre>
+
+
+        <br>
+
+        <h4>Question 2 -"Problem:
+            You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+            
+            Input:
+            abcadeecfb
+            
+            Output:
+            a=2
+            b=2
+            c=2
+            d=1
+            e=2
+            f=1"</h4>
+
+            <h6>we make a function countAlpha and pass argument when call this function and take str as a parameter inside a function make an Object using Map() Method
+the run a loop to get a char of str and check the condition if char is exist in Map Object name alphabetMap variable then set that char and get that char presence else not in object then only set that char
+, to print the given format output firstly we have to get key of object and the count that keys so i get allkeys as an array then run a loop on array and print keys and their count
+            </h6>
+            <pre>
+let a = "abbbcdeeefff"
+function countAlpha(str){
+let alphabetMap =new Map();
+
+for(let char of str){
+if(alphabetMap.has(char)){
+ alphabetMap.set(char,
+ alphabetMap.get(char)+1)
+}else{
+ alphabetMap.set(char,1)
+ }
+ }
+ const allkeys = 
+ Array.from(alphabetMap.keys())
+for(let key of allkeys){
+  console.log(`${key}=
+  ${alphabetMap.get(key)}`)
+    }
+ }
+                
+ countAlpha(a)</pre>
+
+    
+</body>
+</html>
